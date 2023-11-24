@@ -1,4 +1,4 @@
-import type { Options } from "@/components/Dropdown";
+import type { Options } from "@/components/Form";
 
 export const options: Options[] = [
   {
