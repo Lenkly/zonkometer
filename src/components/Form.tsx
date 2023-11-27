@@ -1,8 +1,11 @@
-import styles from "../app/page.module.css";
+import { useState } from "react";
+import styles from "./Form.module.css";
+import { Results } from "./Results";
 
 export type Options = {
   label: string;
   value: string;
+  zonks: number;
 };
 
 type Props = {
@@ -10,6 +13,17 @@ type Props = {
 };
 
 export const Form = ({ options }: Props): JSX.Element => {
+  const [showResults, setShowResults] = useState(false);
+
+  const toggleResults = () => {
+    if (showResults == true) {
+      setShowResults(false);
+    } else {
+      setShowResults(true);
+      hitTheButton("zonk-sound.mp3");
+    }
+  };
+
   const hitTheButton = (url: string) => {
     new Audio(url).play();
   };
@@ -23,20 +37,43 @@ export const Form = ({ options }: Props): JSX.Element => {
   });
 
   return (
-    <div className={styles.zonkForm}>
-      <form>
-        <div style={{ display: "flex", marginBottom: "70px" }}>
-          <p style={{ marginRight: "20px" }}>Wer verdient einen Zonk?</p>
-          <select>{selectables}</select>
+    <>
+      {!showResults ? (
+        <div className={styles.zonkForm}>
+          <form>
+            <div style={{ display: "flex", marginBottom: "90px" }}>
+              <p style={{ marginRight: "20px", fontSize: "20px" }}>
+                Wer verdient einen Zonk?
+              </p>
+              <select>{selectables}</select>
+            </div>
+            <button
+              className={styles.hitButton}
+              onClick={() => toggleResults()}
+              type="submit"
+            >
+              ZONK!
+            </button>
+          </form>
+          <button
+            className={styles.againButton}
+            onClick={() => toggleResults()}
+            style={{ marginTop: "50px" }}
+          >
+            Ich bin nur für die Ergebnisse hier.
+          </button>
         </div>
-        <button
-          className={styles.hitButton}
-          onClick={() => hitTheButton("zonk-sound.mp3")}
-          type="submit"
-        >
-          ZONK!
-        </button>
-      </form>
-    </div>
+      ) : (
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <Results />
+          <button
+            className={styles.againButton}
+            onClick={() => toggleResults()}
+          >
+            Ich verteile noch nen Zonk! &rarr;
+          </button>
+        </div>
+      )}
+    </>
   );
 };

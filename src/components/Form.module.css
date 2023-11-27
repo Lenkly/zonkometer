@@ -1,0 +1,55 @@
+.zonkForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hitButton {
+    display: block;
+    background-color: red;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fb4c4c), to(#f86d6d));
+    background-image: -webkit-linear-gradient(top, #fb4c4c, #f86d6d); 
+    background-image: -moz-linear-gradient(top, #fb4c4c, #f86d6d); 
+    background-image: -ms-linear-gradient(top, #fb4c4c, #f86d6d); 
+    background-image: -o-linear-gradient(top, #fb4c4c, #f86d6d); 
+    color: red;
+    margin: 36px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    text-align: center;
+    line-height: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+  }
+  
+  .hitButton:before {
+    content: "";
+    display: block;
+    background: #000;
+    border-top: 2px solid #ddd;
+    position: absolute;
+    top: -18px;
+    left: -18px;
+    bottom: -18px;
+    right: -18px;
+    z-index: -1;
+    border-radius: 50%;
+    box-shadow: inset 0px 8px 48px #ddd;
+  }
+  
+  .hitButton:hover {
+    background: pink;
+  }
+
+  .againButton {
+    margin-top: 20px;
+    border: none;
+    padding: 20px;
+    color: red;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+}

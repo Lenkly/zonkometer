@@ -19,8 +19,6 @@ export default function Home() {
         height={500}
         className={styles.zonk}
       />
-
-      <p>Okay, zeig mir einfach die Liste.</p>
     </main>
   );
 }
