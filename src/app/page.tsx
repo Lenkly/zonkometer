@@ -15,8 +15,8 @@ export default function Home() {
       <Image
         src="/zonk.png"
         alt="zonk"
-        width={500}
-        height={500}
+        width={450}
+        height={450}
         className={styles.zonk}
       />
     </main>

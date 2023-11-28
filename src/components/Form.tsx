@@ -60,7 +60,7 @@ export const Form = ({ options }: Props): JSX.Element => {
             onClick={() => toggleResults()}
             style={{ marginTop: "50px" }}
           >
-            Ich bin nur für die Ergebnisse hier.
+            Ich bin nur für die Ergebnisse hier. &rarr;
           </button>
         </div>
       ) : (

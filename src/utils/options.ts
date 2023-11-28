@@ -41,4 +41,44 @@ export const options: Options[] = [
     value: "lydi",
     zonks: 91,
   },
+  {
+    label: "Jannik",
+    value: "jannik",
+    zonks: 10,
+  },
+  {
+    label: "Niklas",
+    value: "niklas",
+    zonks: 65,
+  },
+  {
+    label: "Luisa",
+    value: "luisa",
+    zonks: 42,
+  },
+  {
+    label: "Till",
+    value: "till",
+    zonks: 23,
+  },
+  {
+    label: "Jan",
+    value: "jan",
+    zonks: 31,
+  },
+  {
+    label: "Karsten",
+    value: "karsten",
+    zonks: 40,
+  },
+  {
+    label: "Fabian",
+    value: "fabian",
+    zonks: 91,
+  },
+  {
+    label: "Mario",
+    value: "mario",
+    zonks: 91,
+  },
 ];
